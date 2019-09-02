@@ -1,0 +1,57 @@
+Script started on Tue Nov 10 19:11:55 2015
+sh-3.00$ source ~/.bash_aliases
+sh-3.00$ gdb a4
+[?1034hGNU gdb 6.8
+Copyright (C) 2008 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "sparc-sun-solaris2.10"...
+(no debugging symbols found)
+(gdb) display/i $pc
+(gdb) b b1
+Breakpoint 1 at 0x10758
+(gdb) b endIt
+Breakpoint 2 at 0x107d4
+(gdb) r
+Starting program: /home/ugb/shahfarzan.alhafiz/355/a4 
+(no debugging symbols found)
+(no debugging symbols found)
+
+Breakpoint 1, 0x00010758 in b1 ()
+1: x/i $pc
+0x10758 <b1>:   sethi  %hi(0x10400), %o0
+(gdb) x/10d $fp - 40
+0xffbffb98:     0       0       1       1
+0xffbffba8:     1       0       0       1
+0xffbffbb8:     1       1
+(gdb) c
+Continuing.
+(no debugging symbols found)
+Initial box values:
+Box first origin = (0, 0)  width = 1  height = 1  area = 1
+Box second origin = (0, 0)  width = 1  height = 1  area = 1
+
+
+Breakpoint 2, 0x000107d4 in endIt ()
+1: x/i $pc
+0x107d4 <endIt>:        sethi  %hi(0x10400), %o0
+(gdb) x/10d $fp - 40
+0xffbffb98:     0       0       3       3
+0xffbffba8:     9       -5      7       1
+0xffbffbb8:     1       1
+(gdb) x c
+Continuing.
+
+Changed box values:
+Box first origin = (-5, 7)  width = 1  height = 1  area = 1
+Box second origin = (0, 0)  width = 3  height = 3  area = 9
+
+
+Program exited with code 0314.
+(gdb) q
+sh-3.00$ exit
+exit
+
+script done on Tue Nov 10 19:12:37 2015

@@ -1,0 +1,164 @@
+Script started on Tue Oct 27 12:00:01 2015
+sh-3.00$ souce r  rce ~bA A a  /.bash_aliases
+sh-3.00$ gdb a3
+[?1034hGNU gdb 6.8
+Copyright (C) 2008 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "sparc-sun-solaris2.10"...
+(no debugging symbols found)
+(gdb) display/i $pc
+(gdb) b loop
+Breakpoint 1 at 0x106d8
+(gdb) b for1
+Breakpoint 2 at 0x10790
+(gdb) r
+Starting program: /home/ugb/shahfarzan.alhafiz/355/a3 
+(no debugging symbols found)
+(no debugging symbols found)
+
+Breakpoint 1, 0x000106d8 in loop ()
+1: x/i $pc
+0x106d8 <loop>: call  0x20900 <rand@plt>
+0x106dc <loop+4>:       nop 
+(gdb) ni
+0x000106dc in loop ()
+1: x/i $pc
+0x106dc <loop+4>:       nop 
+(gdb) ni
+0x000106e0 in loop ()
+1: x/i $pc
+0x106e0 <loop+8>:       and  %o0, 0xff, %o2
+(gdb) ni
+0x000106e4 in loop ()
+1: x/i $pc
+0x106e4 <loop+12>:      mov  %l2, %l3
+(gdb) ni
+0x000106e8 in loop ()
+1: x/i $pc
+0x106e8 <loop+16>:      sll  %l3, 2, %o1
+(gdb) ni
+0x000106ec in loop ()
+1: x/i $pc
+0x106ec <loop+20>:      add  %fp, %o1, %o1
+(gdb) ni
+0x000106f0 in loop ()
+1: x/i $pc
+0x106f0 <loop+24>:      st  %o2, [ %o1 + -160 ]
+(gdb) ni
+0x000106f4 in loop ()
+1: x/i $pc
+0x106f4 <loop+28>:      sethi  %hi(0x10400), %o0
+(gdb) ni
+0x000106f8 in loop ()
+1: x/i $pc
+0x106f8 <loop+32>:      or  %o0, 0x294, %o0     ! 0x10694 <fmt1>
+(gdb) ni
+0x000106fc in loop ()
+1: x/i $pc
+0x106fc <loop+36>:      call  0x2090c <printf@plt>
+0x10700 <loop+40>:      mov  %l3, %o1
+(gdb) ni
+0x00010700 in loop ()
+1: x/i $pc
+0x10700 <loop+40>:      mov  %l3, %o1
+(gdb) ni
+v[0]:198
+0x00010704 in loop ()
+1: x/i $pc
+0x10704 <loop+44>:      ld  [ %o1 + -160 ], %o1
+(gdb) ni
+0x00010708 in loop ()
+1: x/i $pc
+0x10708 <loop+48>:      b  0x106cc <test>
+0x1070c <loop+52>:      inc  %l2
+(gdb) ni
+0x0001070c in loop ()
+1: x/i $pc
+0x1070c <loop+52>:      inc  %l2
+(gdb) ni
+
+Breakpoint 1, 0x000106d8 in loop ()
+1: x/i $pc
+0x106d8 <loop>: call  0x20900 <rand@plt>
+0x106dc <loop+4>:       nop 
+(gdb) ni
+0x000106dc in loop ()
+1: x/i $pc
+0x106dc <loop+4>:       nop 
+(gdb) ni
+0x000106e0 in loop ()
+1: x/i $pc
+0x106e0 <loop+8>:       and  %o0, 0xff, %o2
+(gdb) ni
+0x000106e4 in loop ()
+1: x/i $pc
+0x106e4 <loop+12>:      mov  %l2, %l3
+(gdb) ni
+0x000106e8 in loop ()
+1: x/i $pc
+0x106e8 <loop+16>:      sll  %l3, 2, %o1
+(gdb) ni
+0x000106ec in loop ()
+1: x/i $pc
+0x106ec <loop+20>:      add  %fp, %o1, %o1
+(gdb) ni
+0x000106f0 in loop ()
+1: x/i $pc
+0x106f0 <loop+24>:      st  %o2, [ %o1 + -160 ]
+(gdb) ni
+0x000106f4 in loop ()
+1: x/i $pc
+0x106f4 <loop+28>:      sethi  %hi(0x10400), %o0
+(gdb) x/40d $fp - 160
+0xffbffb20:     198     126     -1      107
+0xffbffb30:     65588   -1      -4194368        2816
+0xffbffb40:     0       0       0       0
+0xffbffb50:     0       0       0       -12629744
+0xffbffb60:     0       0       0       0
+0xffbffb70:     0       0       -4195360        0
+0xffbffb80:     0       0       0       0
+0xffbffb90:     0       0       0       0
+0xffbffba0:     3       -4195292        4       -4195284
+0xffbffbb0:     5       -4195192        0       0
+(gdb) 
+0xffbffbc0:     1       -4195292        0       0
+0xffbffbd0:     0       0       0       0
+0xffbffbe0:     0       0       0       0
+0xffbffbf0:     0       0       0       0
+0xffbffc00:     0       0       0       0
+0xffbffc10:     0       0       0       0
+0xffbffc20:     1       -4195088        0       -4195052
+0xffbffc30:     -4195024        -4195013        -4194997        -4194965
+0xffbffc40:     -4194938        -4194918        -4194894        -4194883
+0xffbffc50:     -4194848        -4194646        -4194632        -4194620
+(gdb) 
+0xffbffc60:     -4194593        -4194556        -4194539        -4194520
+0xffbffc70:     -4194511        -4194503        -4194469        -4194442
+0xffbffc80:     -4194393        0       2008    -4194368
+0xffbffc90:     2014    -4194349        3       65588
+0xffbffca0:     4       32      5       5
+0xffbffcb0:     9       66768   2016    -12632064
+0xffbffcc0:     7       -12910592       8       2816
+0xffbffcd0:     6       8192    2017    2
+0xffbffce0:     2009    107     0       0
+0xffbffcf0:     795373421       1697609063      1647276904      1634231905
+(gdb) 
+0xffbffd00:     1920622958      778136680       1634101626      791885109
+0xffbffd10:     794899200       1279483725      1330529620      1095915837
+0xffbffd20:     1701732163      1093552467      1329084469      959262976
+0xffbffd30:     1413829197      1031304293      1919746131      1212501068
+0xffbffd40:     1026515561      1848599137      1936195667      1397251907
+0xffbffd50:     1279870286      1413296439      841888057       774975033
+0xffbffd60:     924857144       808530720       842137676       1130319445
+0xffbffd70:     1296388681      1128097134      1598243118      1230196536
+0xffbffd80:     943012141       822104915       1214207060      1497182052
+0xffbffd90:     1702244208      1953705779      956323155       1163017587
+
+The program is running.  Exit anyway? (y or n) y
+sh-3.00$ exit
+exit
+
+script done on Tue Oct 27 12:02:56 2015

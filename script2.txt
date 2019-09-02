@@ -1,0 +1,168 @@
+Script started on Tue Oct 13 18:55:58 2015
+sh-3.00$ exitgdb a2p2source ~/.bash_aliases
+sh-3.00$ gdb a2p2
+[?1034hGNU gdb 6.8
+Copyright (C) 2008 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "sparc-sun-solaris2.10"...
+(no debugging symbols found)
+(gdb) display/i $pc
+(gdb) b loop
+Breakpoint 1 at 0x10708
+(gdb) r
+Starting program: /home/ugb/shahfarzan.alhafiz/355/a2p2 
+(no debugging symbols found)
+(no debugging symbols found)
+
+Breakpoint 1, 0x00010708 in loop ()
+1: x/i $pc
+0x10708 <loop>: cmp  %l5, 0x20
+(gdb) ni
+0x0001070c in loop ()
+1: x/i $pc
+0x1070c <loop+4>:       bge,a   0x10740 <endloop>
+0x10710 <loop+8>:       btst  1, %l4
+(gdb) 
+0x00010714 in loop ()
+1: x/i $pc
+0x10714 <loop+12>:      btst  1, %l2
+(gdb) 
+0x00010718 in loop ()
+1: x/i $pc
+0x10718 <loop+16>:      be  0x10724 <lsbzero>
+0x1071c <loop+20>:      nop 
+(gdb) 
+0x0001071c in loop ()
+1: x/i $pc
+0x1071c <loop+20>:      nop 
+(gdb) 
+0x00010724 in lsbzero ()
+1: x/i $pc
+0x10724 <lsbzero>:      srl  %l2, 1, %l2
+(gdb) 
+0x00010728 in lsbzero ()
+1: x/i $pc
+0x10728 <lsbzero+4>:    mov  %l1, %l6
+(gdb) 
+0x0001072c in lsbzero ()
+1: x/i $pc
+0x1072c <lsbzero+8>:    sra  %l1, 1, %l1
+(gdb) 
+0x00010730 in lsbzero ()
+1: x/i $pc
+0x10730 <lsbzero+12>:   sll  %l6, 0x1f, %l6
+(gdb) p/x $o3
+$1 = 0xff392a00
+(gdb) ni
+0x00010734 in lsbzero ()
+1: x/i $pc
+0x10734 <lsbzero+16>:   xor  %l6, %l2, %l2
+(gdb) 
+0x00010738 in lsbzero ()
+1: x/i $pc
+0x10738 <lsbzero+20>:   b  0x10708 <loop>
+0x1073c <lsbzero+24>:   inc  %l5
+(gdb) 
+0x0001073c in lsbzero ()
+1: x/i $pc
+0x1073c <lsbzero+24>:   inc  %l5
+(gdb) 
+
+Breakpoint 1, 0x00010708 in loop ()
+1: x/i $pc
+0x10708 <loop>: cmp  %l5, 0x20
+(gdb) 
+0x0001070c in loop ()
+1: x/i $pc
+0x1070c <loop+4>:       bge,a   0x10740 <endloop>
+0x10710 <loop+8>:       btst  1, %l4
+(gdb) 
+0x00010714 in loop ()
+1: x/i $pc
+0x10714 <loop+12>:      btst  1, %l2
+(gdb) 
+0x00010718 in loop ()
+1: x/i $pc
+0x10718 <loop+16>:      be  0x10724 <lsbzero>
+0x1071c <loop+20>:      nop 
+(gdb) 
+0x0001071c in loop ()
+1: x/i $pc
+0x1071c <loop+20>:      nop 
+(gdb) 
+0x00010724 in lsbzero ()
+1: x/i $pc
+0x10724 <lsbzero>:      srl  %l2, 1, %l2
+(gdb) p/x $o3
+$2 = 0xff392a00
+(gdb) ni
+0x00010728 in lsbzero ()
+1: x/i $pc
+0x10728 <lsbzero+4>:    mov  %l1, %l6
+(gdb) 
+0x0001072c in lsbzero ()
+1: x/i $pc
+0x1072c <lsbzero+8>:    sra  %l1, 1, %l1
+(gdb) 
+0x00010730 in lsbzero ()
+1: x/i $pc
+0x10730 <lsbzero+12>:   sll  %l6, 0x1f, %l6
+(gdb) 
+0x00010734 in lsbzero ()
+1: x/i $pc
+0x10734 <lsbzero+16>:   xor  %l6, %l2, %l2
+(gdb) 
+0x00010738 in lsbzero ()
+1: x/i $pc
+0x10738 <lsbzero+20>:   b  0x10708 <loop>
+0x1073c <lsbzero+24>:   inc  %l5
+(gdb) 
+0x0001073c in lsbzero ()
+1: x/i $pc
+0x1073c <lsbzero+24>:   inc  %l5
+(gdb) 
+
+Breakpoint 1, 0x00010708 in loop ()
+1: x/i $pc
+0x10708 <loop>: cmp  %l5, 0x20
+(gdb) 
+0x0001070c in loop ()
+1: x/i $pc
+0x1070c <loop+4>:       bge,a   0x10740 <endloop>
+0x10710 <loop+8>:       btst  1, %l4
+(gdb) $ p/x $o3
+$3 = 0xff392a00
+(gdb) ni
+0x00010714 in loop ()
+1: x/i $pc
+0x10714 <loop+12>:      btst  1, %l2
+(gdb) 
+0x00010718 in loop ()
+1: x/i $pc
+0x10718 <loop+16>:      be  0x10724 <lsbzero>
+0x1071c <loop+20>:      nop 
+(gdb) 
+0x0001071c in loop ()
+1: x/i $pc
+0x1071c <loop+20>:      nop 
+(gdb) 
+0x00010720 in loop ()
+1: x/i $pc
+0x10720 <loop+24>:      add  %l0, %l1, %l1
+(gdb) 
+0x00010724 in lsbzero ()
+1: x/i $pc
+0x10724 <lsbzero>:      srl  %l2, 1, %l2
+(gdb) 
+0x00010728 in lsbzero ()
+1: x/i $pc
+0x10728 <lsbzero+4>:    mov  %l1, %l6
+(gdb) quit
+The program is running.  Exit anyway? (y or n) y
+sh-3.00$ exit
+exit
+
+script done on Tue Oct 13 18:57:48 2015

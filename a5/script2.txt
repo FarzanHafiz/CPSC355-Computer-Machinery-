@@ -1,0 +1,19 @@
+Script started on Tue Nov 24 18:51:11 2015
+sh-3.00$ ./test 02 20 98
+February 20th, 98
+sh-3.00$ ./tes  t 0230   30 99
+Invalid Day.
+sh-3.00$ 02 28 2000
+sh: 02: command not found
+sh-3.00$ 02 28 2000./test 02 30 99       52  2 28 2000
+February 28th, 2000
+sh-3.00$ ./test 02 28 20005
+Invalid Year.
+sh-3.00$ ./test 02 28 200055 [1@\[1P[1P[1@82[1P[1P[1@1[1@3
+Invalid Month.
+sh-3.00$ ./test 13 28 2000[1P[1P[1@1[1@5[1P[1@4[1P[1@2
+December 15th, 2000
+sh-3.00$ exit
+exit
+
+script done on Tue Nov 24 18:52:54 2015

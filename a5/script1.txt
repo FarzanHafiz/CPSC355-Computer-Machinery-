@@ -1,0 +1,214 @@
+Script started on Tue Nov 24 15:49:57 2015
+sh-3.00$ ./myProg
+[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 1
+
+Enter the positive integer value to be pushed: 3
+
+Press the return key to continue . . . 
+[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 3
+
+Elements in Stack:
+ 3<---- Top of Stack
+
+Press the return key to continue . . . 
+[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 1
+
+Enter the positive integer value to be pushed: 5
+
+Press the return key to continue . . . 
+[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 3
+
+Elements in Stack:
+ 5<---- Top of Stack
+ 3
+
+Press the return key to continue . . . 
+[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 2
+
+Popped value is 5
+
+Press the return key to continue . . . 
+[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 3
+
+Elements in Stack:
+ 3<---- Top of Stack
+
+Press the return key to continue . . . 
+[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 1
+
+Enter the positive integer value to be pushed: 6
+
+Press the return key to continue . . . 
+[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 11
+
+Invalid option! Try again.
+
+Press the return key to continue . . . 
+[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 1
+
+Enter the positive integer value to be pushed: 7
+
+Press the return key to continue . . . 
+[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 1
+
+Enter the positive integer value to be pushed: 9
+
+Press the return key to continue . . . 
+[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 1
+
+Enter the positive integer value to be pushed: 3
+
+Press the return key to continue . . . 
+[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 3
+
+Elements in Stack:
+ 3<---- Top of Stack
+ 9
+ 7
+ 6
+ 3
+
+Press the return key to continue . . . 
+[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 1
+
+Enter the positive integer value to be pushed: 8
+
+Stack Overflow: Cannot add any more values to Stack.
+
+Press the return key to continue . . . 
+[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 2
+
+Popped value is 3
+
+Press the return key to continue . . . 
+[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 3
+
+Elements in Stack:
+ 9<---- Top of Stack
+ 7
+ 6
+ 3
+
+Press the return key to continue . . . 
+[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 2
+
+Popped value is 9
+
+Press the return key to continue . . . 
+[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 2
+
+Popped value is 7
+
+Press the return key to continue . . . 
+[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 3
+
+Elements in Stack:
+ 6<---- Top of Stack
+ 3
+
+Press the return key to continue . . . 
+[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 2
+
+Popped value is 6
+
+Press the return key to continue . . . 
+[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 2 3
+
+Elements in Stack:
+ 3<---- Top of Stack
+
+Press the return key to continue . . . 
+[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 2
+
+Popped value is 3
+
+Press the return key to continue . . . 
+[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 3
+
+Stack is empty.
+
+Press the return key to continue . . . 
+[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 3
+
+Stack is empty.
+
+Press the return key to continue . . . 
+[H[2J### Stack Operations ###
+
+Press 1 - Push, 2 - Pop, 3 - Display, 4 - Exit
+Your option? 4
+
+Terminating program
+sh-3.00$ exit
+exit
+
+script done on Tue Nov 24 15:53:12 2015

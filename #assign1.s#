@@ -1,0 +1,12 @@
+
+	.global main
+main:	save	%sp, -96, %sp
+
+	mov	-2, %l0		!initialize x to -2
+
+loop:	mov	2, %o0
+	mov	%l0, %o1
+	call	.mul
+	nop
+	
+	

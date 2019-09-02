@@ -1,0 +1,392 @@
+Script started on Tue Oct 13 18:48:16 2015
+sh-3.00$ exitdisplay/i $pcsh-3.00$ [5Pgbd a2p1source ~/.bash_aliases
+sh-3.00$ gdb a2p1
+[?1034hGNU gdb 6.8
+Copyright (C) 2008 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "sparc-sun-solaris2.10"...
+(no debugging symbols found)
+(gdb) display/i $pc
+(gdb) b looptest
+Breakpoint 1 at 0x10798
+(gdb) r
+Starting program: /home/ugb/shahfarzan.alhafiz/355/a2p1 
+(no debugging symbols found)
+(no debugging symbols found)
+(no debugging symbols found)
+Checksum before feeding: 0xffff
+Values of Input registers: 0xaaaa8c01
+Values of Input registers: 0xff001234
+Values of Input registers: 0x13579bdf
+Values of Input registers: 0xc8b4ae32
+
+Breakpoint 1, 0x00010798 in looptest ()
+1: x/i $pc
+0x10798 <looptest>:     cmp  %l1, 0
+(gdb) ni
+0x0001079c in looptest ()
+1: x/i $pc
+0x1079c <looptest+4>:   bg  0x10768 <start>
+0x107a0 <looptest+8>:   nop 
+(gdb) ni
+0x000107a0 in looptest ()
+1: x/i $pc
+0x107a0 <looptest+8>:   nop 
+(gdb) ni
+0x00010768 in start ()
+1: x/i $pc
+0x10768 <start>:        sll  %l0, 1, %l0
+(gdb) ni
+0x0001076c in start ()
+1: x/i $pc
+0x1076c <start+4>:      srl  %l3, 0x1f, %o0
+(gdb) p/x $l0
+$1 = 0x1fffe
+(gdb) ni
+0x00010770 in start ()
+1: x/i $pc
+0x10770 <start+8>:      or  %l0, %o0, %l0
+(gdb) ni
+0x00010774 in start ()
+1: x/i $pc
+0x10774 <start+12>:     sethi  %hi(0x10000), %o0
+(gdb) ni
+0x00010778 in start ()
+1: x/i $pc
+0x10778 <start+16>:     and  %l0, %o0, %o1
+(gdb) p/x $l0
+$2 = 0x1ffff
+(gdb) ni
+0x0001077c in start ()
+1: x/i $pc
+0x1077c <start+20>:     cmp  %o0, %o1
+(gdb) ni
+0x00010780 in start ()
+1: x/i $pc
+0x10780 <start+24>:     bne  0x10794 <dec>
+0x10784 <start+28>:     sll  %l3, 1, %l3
+(gdb) ni
+0x00010784 in start ()
+1: x/i $pc
+0x10784 <start+28>:     sll  %l3, 1, %l3
+(gdb) ni
+0x00010788 in start ()
+1: x/i $pc
+0x10788 <start+32>:     sethi  %hi(0x1000), %o0
+(gdb) ni
+0x0001078c in start ()
+1: x/i $pc
+0x1078c <start+36>:     or  %o0, 0x21, %o0      ! 0x1021
+(gdb) ni
+0x00010790 in start ()
+1: x/i $pc
+0x10790 <start+40>:     xor  %l0, %o0, %l0
+(gdb) p/x $; l0
+$3 = 0x1ffff
+(gdb) ni
+0x00010794 in dec ()
+1: x/i $pc
+0x10794 <dec>:  dec  %l1
+(gdb) ni
+
+Breakpoint 1, 0x00010798 in looptest ()
+1: x/i $pc
+0x10798 <looptest>:     cmp  %l1, 0
+(gdb) ni
+0x0001079c in looptest ()
+1: x/i $pc
+0x1079c <looptest+4>:   bg  0x10768 <start>
+0x107a0 <looptest+8>:   nop 
+(gdb) ni
+0x000107a0 in looptest ()
+1: x/i $pc
+0x107a0 <looptest+8>:   nop 
+(gdb) ni
+0x00010768 in start ()
+1: x/i $pc
+0x10768 <start>:        sll  %l0, 1, %l0
+(gdb) p/x $l0
+$4 = 0x1efde
+(gdb) ni
+0x0001076c in start ()
+1: x/i $pc
+0x1076c <start+4>:      srl  %l3, 0x1f, %o0
+(gdb) ni
+0x00010770 in start ()
+1: x/i $pc
+0x10770 <start+8>:      or  %l0, %o0, %l0
+(gdb) ni
+0x00010774 in start ()
+1: x/i $pc
+0x10774 <start+12>:     sethi  %hi(0x10000), %o0
+(gdb) ni
+0x00010778 in start ()
+1: x/i $pc
+0x10778 <start+16>:     and  %l0, %o0, %o1
+(gdb) ni
+0x0001077c in start ()
+1: x/i $pc
+0x1077c <start+20>:     cmp  %o0, %o1
+(gdb) ni
+0x00010780 in start ()
+1: x/i $pc
+0x10780 <start+24>:     bne  0x10794 <dec>
+0x10784 <start+28>:     sll  %l3, 1, %l3
+(gdb) ni
+0x00010784 in start ()
+1: x/i $pc
+0x10784 <start+28>:     sll  %l3, 1, %l3
+(gdb) ni
+0x00010788 in start ()
+1: x/i $pc
+0x10788 <start+32>:     sethi  %hi(0x1000), %o0
+(gdb) ni
+0x0001078c in start ()
+1: x/i $pc
+0x1078c <start+36>:     or  %o0, 0x21, %o0      ! 0x1021
+(gdb) ni
+0x00010790 in start ()
+1: x/i $pc
+0x10790 <start+40>:     xor  %l0, %o0, %l0
+(gdb) p/x$l0[1@ $l0
+$5 = 0x3dfbc
+(gdb) ni
+0x00010794 in dec ()
+1: x/i $pc
+0x10794 <dec>:  dec  %l1
+(gdb) ni
+
+Breakpoint 1, 0x00010798 in looptest ()
+1: x/i $pc
+0x10798 <looptest>:     cmp  %l1, 0
+(gdb) ni
+0x0001079c in looptest ()
+1: x/i $pc
+0x1079c <looptest+4>:   bg  0x10768 <start>
+0x107a0 <looptest+8>:   nop 
+(gdb) ni
+0x000107a0 in looptest ()
+1: x/i $pc
+0x107a0 <looptest+8>:   nop 
+(gdb) n
+Single stepping until exit from function looptest, 
+which has no line number information.
+0x00010768 in start ()
+1: x/i $pc
+0x10768 <start>:        sll  %l0, 1, %l0
+(gdb) ni
+0x0001076c in start ()
+1: x/i $pc
+0x1076c <start+4>:      srl  %l3, 0x1f, %o0
+(gdb) p/x $l0
+$6 = 0x79f3a
+(gdb) ni
+0x00010770 in start ()
+1: x/i $pc
+0x10770 <start+8>:      or  %l0, %o0, %l0
+(gdb) ni
+0x00010774 in start ()
+1: x/i $pc
+0x10774 <start+12>:     sethi  %hi(0x10000), %o0
+(gdb) ni
+0x00010778 in start ()
+1: x/i $pc
+0x10778 <start+16>:     and  %l0, %o0, %o1
+(gdb) ni
+0x0001077c in start ()
+1: x/i $pc
+0x1077c <start+20>:     cmp  %o0, %o1
+(gdb) ni
+0x00010780 in start ()
+1: x/i $pc
+0x10780 <start+24>:     bne  0x10794 <dec>
+0x10784 <start+28>:     sll  %l3, 1, %l3
+(gdb) ni
+0x00010784 in start ()
+1: x/i $pc
+0x10784 <start+28>:     sll  %l3, 1, %l3
+(gdb) ni
+0x00010788 in start ()
+1: x/i $pc
+0x10788 <start+32>:     sethi  %hi(0x1000), %o0
+(gdb) ni
+0x0001078c in start ()
+1: x/i $pc
+0x1078c <start+36>:     or  %o0, 0x21, %o0      ! 0x1021
+(gdb) ni
+0x00010790 in start ()
+1: x/i $pc
+0x10790 <start+40>:     xor  %l0, %o0, %l0
+(gdb) n p/x $l0
+$7 = 0x79f3b
+(gdb) ni
+0x00010794 in dec ()
+1: x/i $pc
+0x10794 <dec>:  dec  %l1
+(gdb) ni
+
+Breakpoint 1, 0x00010798 in looptest ()
+1: x/i $pc
+0x10798 <looptest>:     cmp  %l1, 0
+(gdb) ni
+0x0001079c in looptest ()
+1: x/i $pc
+0x1079c <looptest+4>:   bg  0x10768 <start>
+0x107a0 <looptest+8>:   nop 
+(gdb) ni
+0x000107a0 in looptest ()
+1: x/i $pc
+0x107a0 <looptest+8>:   nop 
+(gdb) ni
+0x00010768 in start ()
+1: x/i $pc
+0x10768 <start>:        sll  %l0, 1, %l0
+(gdb) p/x $l0
+$8 = 0x78f1a
+(gdb) ni
+0x0001076c in start ()
+1: x/i $pc
+0x1076c <start+4>:      srl  %l3, 0x1f, %o0
+(gdb) ni
+0x00010770 in start ()
+1: x/i $pc
+0x10770 <start+8>:      or  %l0, %o0, %l0
+(gdb) ni
+0x00010774 in start ()
+1: x/i $pc
+0x10774 <start+12>:     sethi  %hi(0x10000), %o0
+(gdb) ni
+0x00010778 in start ()
+1: x/i $pc
+0x10778 <start+16>:     and  %l0, %o0, %o1
+(gdb) ni
+0x0001077c in start ()
+1: x/i $pc
+0x1077c <start+20>:     cmp  %o0, %o1
+(gdb) ni
+0x00010780 in start ()
+1: x/i $pc
+0x10780 <start+24>:     bne  0x10794 <dec>
+0x10784 <start+28>:     sll  %l3, 1, %l3
+(gdb) ni
+0x00010784 in start ()
+1: x/i $pc
+0x10784 <start+28>:     sll  %l3, 1, %l3
+(gdb) ni
+0x00010788 in start ()
+1: x/i $pc
+0x10788 <start+32>:     sethi  %hi(0x1000), %o0
+(gdb) ni
+0x0001078c in start ()
+1: x/i $pc
+0x1078c <start+36>:     or  %o0, 0x21, %o0      ! 0x1021
+(gdb) ni
+0x00010790 in start ()
+1: x/i $pc
+0x10790 <start+40>:     xor  %l0, %o0, %l0
+(gdb) ni
+0x00010794 in dec ()
+1: x/i $pc
+0x10794 <dec>:  dec  %l1
+(gdb) p/x % 4$  $l0
+$9 = 0xf0e15
+(gdb) ni
+
+Breakpoint 1, 0x00010798 in looptest ()
+1: x/i $pc
+0x10798 <looptest>:     cmp  %l1, 0
+(gdb) ni
+0x0001079c in looptest ()
+1: x/i $pc
+0x1079c <looptest+4>:   bg  0x10768 <start>
+0x107a0 <looptest+8>:   nop 
+(gdb) ni
+0x000107a0 in looptest ()
+1: x/i $pc
+0x107a0 <looptest+8>:   nop 
+(gdb) ni
+0x00010768 in start ()
+1: x/i $pc
+0x10768 <start>:        sll  %l0, 1, %l0
+(gdb) ni
+0x0001076c in start ()
+1: x/i $pc
+0x1076c <start+4>:      srl  %l3, 0x1f, %o0
+(gdb) ni
+0x00010770 in start ()
+1: x/i $pc
+0x10770 <start+8>:      or  %l0, %o0, %l0
+(gdb) p/x$l0[1@ $l0
+$10 = 0x1e1c2a
+(gdb) ni
+0x00010774 in start ()
+1: x/i $pc
+0x10774 <start+12>:     sethi  %hi(0x10000), %o0
+(gdb) ni
+0x00010778 in start ()
+1: x/i $pc
+0x10778 <start+16>:     and  %l0, %o0, %o1
+(gdb) ni
+0x0001077c in start ()
+1: x/i $pc
+0x1077c <start+20>:     cmp  %o0, %o1
+(gdb) ni
+0x00010780 in start ()
+1: x/i $pc
+0x10780 <start+24>:     bne  0x10794 <dec>
+0x10784 <start+28>:     sll  %l3, 1, %l3
+(gdb) ni
+0x00010784 in start ()
+1: x/i $pc
+0x10784 <start+28>:     sll  %l3, 1, %l3
+(gdb) ni
+0x00010794 in dec ()
+1: x/i $pc
+0x10794 <dec>:  dec  %l1
+(gdb) ni
+
+Breakpoint 1, 0x00010798 in looptest ()
+1: x/i $pc
+0x10798 <looptest>:     cmp  %l1, 0
+(gdb) ni
+0x0001079c in looptest ()
+1: x/i $pc
+0x1079c <looptest+4>:   bg  0x10768 <start>
+0x107a0 <looptest+8>:   nop 
+(gdb) ni
+0x000107a0 in looptest ()
+1: x/i $pc
+0x107a0 <looptest+8>:   nop 
+(gdb) ni
+0x00010768 in start ()
+1: x/i $pc
+0x10768 <start>:        sll  %l0, 1, %l0
+(gdb) p/x %l0
+A syntax error in expression, near `%l0'.
+(gdb) p/x $l0
+$11 = 0x1e1c2b
+(gdb) ni
+0x0001076c in start ()
+1: x/i $pc
+0x1076c <start+4>:      srl  %l3, 0x1f, %o0
+(gdb) ni
+0x00010770 in start ()
+1: x/i $pc
+0x10770 <start+8>:      or  %l0, %o0, %l0
+(gdb) ni
+0x00010774 in start ()
+1: x/i $pc
+0x10774 <start+12>:     sethi  %hi(0x10000), %o0
+(gdb) ni
+0x00010778 in start ()
+1: x/i $pc
+0x10778 <start+16>:     and  %l0, %o0, %o1
+(gdb) quit
+The program is running.  Exit anyway? (y or n) y
+sh-3.00$ exit
+exit
+
+script done on Tue Oct 13 18:53:51 2015
